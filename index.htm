@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Test de IQ</h1>
+      <p id="description" class="description text-center">
+        Comprueba tu nivel de inteligencia en la siguiente encuesta.
+      </p>
+    </header>
+    <div id="resultado"></div>
+
+    <form id="survey-form">
+      <div class="form-group">
+        <p>1. ¿Cuál de las palabras mostradas a continuación es la más cercana en significado a la palabra
+          "tranquilizador"?</p>
+        <label>
+          <input name="user-recommend1" value="compasivo" type="radio" class="input-radio" checked />Compasivo</label>
+        <label>
+          <input name="user-recommend1" value="reconfortantes" type="radio" class="input-radio" />Reconfortante</label>
+
+        <label><input name="user-recommend1" value="explicativo" type="radio" class="input-radio" />Explicativo</label>
+        <label><input name="user-recommend1" value="entrometido" type="radio" class="input-radio" />Entrometido</label>
+      </div>
+
+      <div class="form-group">
+        <p>2. ¿Qué número sigue por lógica a esta serie? <br> <br> 4 6 9 6 14 6 ...</br> </p>
+
+        <label>
+          <input name="user-recommend2" value="seis" type="radio" class="input-radio" checked />6</label>
+        <label>
+          <input name="user-recommend2" value="diescisiete" type="radio" class="input-radio" />17</label>
+
+        <label><input name="user-recommend2" value="diecinueve" type="radio" class="input-radio" />19</label>
+        <label><input name="user-recommend2" value="veintiuno" type="radio" class="input-radio" />21</label>
+      </div>
+
+      <div class="form-group">
+        <p>3. ¿Cuál de las conclusiones a continuación se puede extraer con absoluta certeza en función de las
+          siguientes dos proposiciones?</br></p>
+
+        <label>
+          <input name="user-recommend3" value="coleccionista_arquitecto" type="radio" class="input-radio"
+            checked />Todos los coleccionistas de sellos son arquitectos.</label>
+        <label>
+          <input name="user-recommend3" value="arquitecto_aburrido" type="radio" class="input-radio" />Los arquitectos
+          no son personas aburridas.</label>
+
+        <label><input name="user-recommend3" value="coleccionista_aburrido" type="radio" class="input-radio" />Ningún
+          coleccionista de sellos es una persona aburrida.</label>
+        <label><input name="user-recommend3" value="aburrido_arquitecto" type="radio" class="input-radio" />Algunas
+          personas aburridas son arquitectos.</label>
+      </div>
+
+      <div class="form-group">
+        <p>4. Tomás tiene un juego nuevo de palos de golf. Con el palo 8, la pelota recorre una distancia media de 100
+          metros. Con el palo 7, la pelota recorre una distancia media de 108 metros. Con el palo 6, la pelota recorre
+          una distancia media de 114 metros. ¿Qué distancia recorrerá la pelota si Tomás usa el palo 5?</p>
+
+        <label>
+          <input name="user-recommend4" value="cientoveintedos" type="radio" class="input-radio" checked />122
+          metros.</label>
+        <label>
+          <input name="user-recommend4" value="cientoveinte" type="radio" class="input-radio" />120 metros.</label>
+
+        <label><input name="user-recommend4" value="cientodieciocho" type="radio" class="input-radio" />118
+          metros.</label>
+        <label><input name="user-recommend4" value="cientodieciseis" type="radio" class="input-radio" />116
+          metros.</label>
+      </div>
+
+      <div class="form-group">
+        <p>5. ¿Cuál de las palabras de más abajo expresa el significado opuesto a la palabra "duro"?</p>
+
+        <label>
+          <input name="user-recommend5" value="cobarde" type="radio" class="input-radio" checked />Cobarde.</label>
+        <label>
+          <input name="user-recommend5" value="estirado" type="radio" class="input-radio" />Estirado.</label>
+
+        <label><input name="user-recommend5" value="fuerte" type="radio" class="input-radio" />Fuerte.</label>
+        <label><input name="user-recommend5" value="debil" type="radio" class="input-radio" />Débil.</label>
+        <label><input name="user-recommend5" value="masculino" type="radio" class="input-radio" />Masculino.</label>
+      </div>
+
+      <div class="form-group">
+        <p>6. Agua es a tubería lo que ... es a cable.</p>
+
+        <label>
+          <input name="user-recommend6" value="alambre" type="radio" class="input-radio" checked />Alambre.</label>
+        <label>
+          <input name="user-recommend6" value="electricidad" type="radio" class="input-radio" />Electricidad.</label>
+
+        <label><input name="user-recommend6" value="calor" type="radio" class="input-radio" />Calor.</label>
+        <label><input name="user-recommend6" value="gas" type="radio" class="input-radio" />Gas.</label>
+      </div>
+
+      <div class="form-group">
+        <p>7. ¿Qué palabra significa "expresión de disconformidad"?</p>
+
+        <label>
+          <input name="user-recommend7" value="injusticia" type="radio" class="input-radio"
+            checked />Injusticia.</label>
+        <label>
+          <input name="user-recommend7" value="queja" type="radio" class="input-radio" />Queja.</label>
+
+        <label><input name="user-recommend7" value="futil" type="radio" class="input-radio" />Fútil.</label>
+        <label><input name="user-recommend7" value="pecado" type="radio" class="input-radio" />Pecado.</label>
+        <label><input name="user-recommend7" value="discordia" type="radio" class="input-radio" />Discordia.</label>
+      </div>
+      <!--luego-->
+    </form>
+
+    <form id="survey-form2" onsubmit="verificarRespuestas(event)">
+
+      Completa lo siguiente para obtener el certificado:
+      <div class="form-group">
+        <label id="name-label" for="name"><br>Nombre</br></label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Escribe tu nombre" required />
+      </div>
+      <div class="form-group">
+        <p>Genero</p>
+        <select id="most-like" name="mostLike" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label id="number-label" for="number">Edad<span class="clue">(opcional)</span></label>
+        <input type="number" name="age" id="number" min="1" max="99" class="form-control" placeholder="Edad" />
+      </div>
+
+      <div class="form-group">
+        <!-- Despues -->
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
